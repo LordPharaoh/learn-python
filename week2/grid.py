@@ -22,8 +22,11 @@ for x in range(int(width/tile_size)):
 
 #backgrid = list(grid)
 
-def set_tile(x, y):
-	grid[x][y] = True
+def set_tile(x, y, color=None):
+	if color is not None:
+		grid[x][y] = color
+	else:
+		grid[x][y] = True
 def unset_tile(x, y):
 	grid[x][y] = False
 def toggle_tile(x, y):
@@ -35,7 +38,10 @@ def update():
 	canvas.delete("all")
 	for x, col in enumerate(grid):
 		for y, tile in enumerate(col):
-			color = dark_color if tile else light_color
+			if not (isinstance(tile, bool)):
+				color = tile
+			else:
+				color = dark_color if tile else light_color
 			canvas.create_rectangle(int(x * tile_size), int(y * tile_size), int(tile_size * (x + 1)), int(tile_size * (y + 1)), fill=color, outline=line_color)
 			if show_coords:
 				canvas.create_text(int(x * tile_size) + text_offset, int(y * tile_size) + text_offset, fill=text_color, text=(str(x) + "," + str(y)))
