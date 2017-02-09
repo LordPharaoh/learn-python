@@ -43,9 +43,9 @@ def update():
 			
 
 def clear():
-	for x, col in enumerate(grid):
-		for y, tile in enumerate(col):
-			tile = False
+	for x in range(len(grid)):
+		for y in range(len(grid[x])):
+			unset_tile(x, y)
 
 #clear()
 #set_tile(0, 0)
