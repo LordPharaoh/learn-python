@@ -53,7 +53,8 @@ grid.clear()
 Every time you call update, the grid will display the set tiles. **If you do not call this function in your loop, your grid will never change.**
 ```python
 grid.update()
-``` ####While 
+``` 
+####While 
 If the program quits, the window will close and we won't be able to see our work. Every program needs to end in 
 ```python
 while True:
