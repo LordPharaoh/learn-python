@@ -1,8 +1,12 @@
 #Python Class
 Python files, assignments, cheat-sheets, and recaps sorted by week. 
 
+##Recaps
+1. [Week 1](https://github.com/LordPharaoh/learn-python/blob/master/week1/recap.md)
+1. [Week 2](https://github.com/LordPharaoh/learn-python/blob/master/week2/recap.md)
+
 ##Downloading This 
-You can download these files by clicking on the green 'Clone or Download' button in the top-right and choosing 'Download as Zip'. 
+You can download these files by clicking on [this link](https://github.com/LordPharaoh/learn-python/archive/master.zip) or the green 'Clone or Download' button in the top-right and choosing 'Download as Zip'. 
 If you're familiar with git, you do you.
 
 ##Using Python (.py) Files
