@@ -16,7 +16,7 @@ Folders are sorted by week and you can click on any recap file to see a formatte
 ###Functions
 Function can do a lot of useful things, but we have primarily used them as a time saving method to draw things onto our grid. The function will run some piece of code for us with any value we give it. We can create a function to draw a 2x2 square at given co-ordinates, for example.
 ```python
-def square(x, y):
+def square(5, 5):
 	grid.set_tile(x, y)
 	grid.set_tile(x + 1, y)
 	grid.set_tile(x, y + 1)
