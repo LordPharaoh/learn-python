@@ -52,7 +52,7 @@ A solution is presented for Windows computers only; attaining similar functional
 import winsound
 #frequency, duration in milliseconds (1000=1 second)
 winsound.beep(1000, 500)
-``
+```
 
 
 
