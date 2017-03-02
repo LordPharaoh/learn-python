@@ -59,7 +59,7 @@ print(message)
 ```
 
 #Scoping Quiz
-1. Will this code produce an error?
+1 Will this code produce an error?
 ```python
 	def example(param1):
 		print param1
@@ -68,14 +68,14 @@ print(message)
 ```
 Mark one: **T[ ] F[ ]**
 
-2. What will be the output of
+2 What will be the output of
 ```python
 	example(5)
 	example2(6)
 ```
 Write an answer.
  
-3. Which one of these examples would not produce an error?
+3 Which one of these examples would not produce an error?
 ```python
 def example_a(param1, param2):
 	return param1 + param2
@@ -92,7 +92,7 @@ print(param1 + param2)
 ```
 Mark one: **A[ ] B[ ] C[ ]**
 
-4. Will this code produce an error?
+4 Will this code produce an error?
 ```python
 for i in range(10):
 	count = 0
@@ -102,7 +102,7 @@ for i in range(10):
 ```
 Mark one: **T[ ] F[ ]**
 
-5. *Bonus* What will the previous example print out?
+5 *Bonus* What will the previous example print out?
 Write an answer
 
 
