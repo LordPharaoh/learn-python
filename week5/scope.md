@@ -67,12 +67,14 @@ print(message)
 		print param1
 ```
 Mark one: **T[ ] F[ ]**
+
 2. What will be the output of
 ```python
 	example(5)
 	example2(6)
 ```
 Write an answer.
+ 
 3. Which one of these examples would not produce an error?
 ```python
 def example_a(param1, param2):
@@ -89,6 +91,7 @@ def example_c(param1, param2):
 print(param1 + param2)
 ```
 Mark one: **A[ ] B[ ] C[ ]**
+
 4. Will this code produce an error?
 ```python
 for i in range(10):
@@ -98,6 +101,7 @@ for i in range(10):
 	print count
 ```
 Mark one: **T[ ] F[ ]**
+
 5. *Bonus* What will the previous example print out?
 Write an answer
 
