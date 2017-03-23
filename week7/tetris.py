@@ -21,6 +21,7 @@ def rand_color():
 
 yhigh = 0;
 ylow = 1;
+x = 5
 WhichShape = randint(1,5)
 colorchosen = rand_color()
 move_down = True
@@ -29,64 +30,64 @@ def draw_shape():
 		global move_down 
 		if WhichShape == 1:
 				if (ylow > 20) or \
-					(tg.get_tile(5, yhigh) != False) or \
-					(tg.get_tile(6, yhigh) != False) or \
-					(tg.get_tile(6, ylow) != False) or \
-					(tg.get_tile(5, ylow) != False):
+					(tg.get_tile(x, yhigh) != False) or \
+					(tg.get_tile(x+1, yhigh) != False) or \
+					(tg.get_tile(x+1, ylow) != False) or \
+					(tg.get_tile(x, ylow) != False):
 					move_down = False
 				else: 
-					tg.set_tile(5,yhigh,colorchosen)
-					tg.set_tile(6,yhigh,colorchosen)
-					tg.set_tile(6,ylow,colorchosen)
-					tg.set_tile(5,ylow,colorchosen)
+					tg.set_tile(x,yhigh,colorchosen)
+					tg.set_tile(x+1,yhigh,colorchosen)
+					tg.set_tile(x+1,ylow,colorchosen)
+					tg.set_tile(x,ylow,colorchosen)
 		elif WhichShape == 2:
 				if (yhigh > 20) or \
-					(tg.get_tile(5, yhigh) != False) or \
-					(tg.get_tile(6, yhigh) != False) or \
-					(tg.get_tile(7, yhigh) != False) or \
-					(tg.get_tile(8, yhigh) != False):
+					(tg.get_tile(x, yhigh) != False) or \
+					(tg.get_tile(x+1, yhigh) != False) or \
+					(tg.get_tile(x+2, yhigh) != False) or \
+					(tg.get_tile(x+3, yhigh) != False):
 					move_down = False
 				else: 
-					tg.set_tile(5,yhigh,colorchosen)
-					tg.set_tile(6,yhigh,colorchosen)
-					tg.set_tile(7,yhigh,colorchosen)
-					tg.set_tile(8,yhigh,colorchosen)
-		elif WhichShape == 3:
+					tg.set_tile(x,yhigh,colorchosen)
+					tg.set_tile(x+1,yhigh,colorchosen)
+					tg.set_tile(x+2,yhigh,colorchosen)
+					tg.set_tile(x+3,yhigh,colorchosen)
+		elif WhichShape == x-2:
 				if (ylow > 20) or \
-					(tg.get_tile(5, yhigh) != False) or \
-					(tg.get_tile(6, yhigh) != False) or \
-					(tg.get_tile(6, ylow) != False) or \
-					(tg.get_tile(7, ylow) != False):
+					(tg.get_tile(x, yhigh) != False) or \
+					(tg.get_tile(x+1, yhigh) != False) or \
+					(tg.get_tile(x+1, ylow) != False) or \
+					(tg.get_tile(x+2, ylow) != False):
 					move_down = False
 				else: 
-					tg.set_tile(5,yhigh,colorchosen)
-					tg.set_tile(6,yhigh,colorchosen)
-					tg.set_tile(6,ylow,colorchosen)
-					tg.set_tile(7,ylow,colorchosen)
-		elif WhichShape == 4:
+					tg.set_tile(x,yhigh,colorchosen)
+					tg.set_tile(x+1,yhigh,colorchosen)
+					tg.set_tile(x+1,ylow,colorchosen)
+					tg.set_tile(x+2,ylow,colorchosen)
+		elif WhichShape == x-1:
 				if (ylow > 20) or \
-					(tg.get_tile(5, yhigh) != False) or \
-					(tg.get_tile(5, ylow) != False) or \
-					(tg.get_tile(6, ylow) != False) or \
-					(tg.get_tile(4, ylow) != False):
+					(tg.get_tile(x, yhigh) != False) or \
+					(tg.get_tile(x, ylow) != False) or \
+					(tg.get_tile(x+1, ylow) != False) or \
+					(tg.get_tile(x-1, ylow) != False):
 					move_down = False
 				else: 
-					tg.set_tile(5,yhigh,colorchosen)
-					tg.set_tile(5,ylow,colorchosen)
-					tg.set_tile(6,ylow,colorchosen)
-					tg.set_tile(4,ylow,colorchosen)
-		elif WhichShape == 5:
+					tg.set_tile(x,yhigh,colorchosen)
+					tg.set_tile(x,ylow,colorchosen)
+					tg.set_tile(x+1,ylow,colorchosen)
+					tg.set_tile(x-1,ylow,colorchosen)
+		elif WhichShape == x:
 				if (ylow > 20) or \
-					(tg.get_tile(3, ylow) != False) or \
-					(tg.get_tile(3, yhigh) != False) or \
-					(tg.get_tile(4, yhigh) != False) or \
-					(tg.get_tile(5, yhigh) != False):
+					(tg.get_tile(x-2, ylow) != False) or \
+					(tg.get_tile(x-2, yhigh) != False) or \
+					(tg.get_tile(x-1, yhigh) != False) or \
+					(tg.get_tile(x, yhigh) != False):
 					move_down = False
 				else: 
-					tg.set_tile(3,ylow,colorchosen)
-					tg.set_tile(3,yhigh,colorchosen)
-					tg.set_tile(4,yhigh,colorchosen)
-					tg.set_tile(5,yhigh,colorchosen)
+					tg.set_tile(x-2,ylow,colorchosen)
+					tg.set_tile(x-2,yhigh,colorchosen)
+					tg.set_tile(x-1,yhigh,colorchosen)
+					tg.set_tile(x,yhigh,colorchosen)
 
 
 def delete_block():
@@ -115,6 +116,15 @@ def delete_block():
 				tg.unset_tile(3,yhigh)
 				tg.unset_tile(4,yhigh)
 				tg.unset_tile(5,yhigh)
+
+def move_right():
+	global x
+	x += 1
+	
+def move_left():
+	global x
+	x -= 1
+	
 
 #this text grey
 def check_rows():
